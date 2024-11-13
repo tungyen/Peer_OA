@@ -14,7 +14,7 @@ For the model, I choose YoloV11 and YoloV11-seg as the object detection model an
 ![image](https://github.com/tungyen/Peer_OA/blob/master/res_img/metric_seg.png)
 
 # _Transforming to Onnx format for edge device_ #
-In this part, I chose to transform both Yolo model to Onnx format for the following usage. The code is specified in `onnx_transform.py`
+In this part, I chose to transform both Yolo model to Onnx format for the following usage. The code is specified in `onnx_transform.py`. Note that you must train the model before running this part. The runs folder in this code is generated automatically by the training code.
 
 
 # _Ros subscribe code_ #
