@@ -24,3 +24,10 @@ for p in pred:
         cv2.putText(image, label, (x1, y1 - 3), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
     file_name = os.path.basename(image_name)[:-4]
     cv2.imwrite('./res_img/detection_pred.png', image)
+    
+# Validate the model
+metrics = model.val()  # no arguments needed, dataset and settings remembered
+metrics.box.map  # map50-95
+metrics.box.map50  # map50
+metrics.box.map75  # map75
+metrics.box.maps  # a list contains map50-95 of each category
