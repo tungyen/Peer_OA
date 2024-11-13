@@ -9,7 +9,7 @@ Later in the RoboFlow, I modify the auto-labeling result manually and then launc
 For the model, I choose YoloV11 and YoloV11-seg as the object detection model and semantic segmentation model respectively due to their great trade-off between efficiency and accuracy. Based on ultralytics package, I trained both model in epoch 200 and batch size as 4. The pre-trained model I used is the Yolov11-large, which is compatible for edge device under GPU and also has higher accuracy compared to nano model or small model. By running the code `train_yolo.py` and `train_yolo_seg`, the validation metric is shown below for both model:
 
 ![image](https://github.com/tungyen/Peer_OA/blob/master/res_img/detection_pred.png)
-![image](https://github.com/tungyen/Peer_OA/blob/master/res_img/segment_pred.png)
+![image](https://github.com/tungyen/Peer_OA/blob/master/res_img/segment_pred.jpg)
 
 # _Transforming to Onnx format for edge device_ #
 In this part, I chose to transform both Yolo model to Onnx format for the following usage. The code is specified in `onnx_transform.py`
