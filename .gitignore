@@ -1,4 +1,7 @@
 dataset
+Pallets
+Pallets_detection
+Pallets_segment
 runs
 *.eps
 *.aux
