@@ -2,12 +2,15 @@ dataset
 Pallets
 Pallets_detection
 Pallets_segment
+Pallets-detection.v1i.yolov11
+internship_assignment_sample_bag
+zed_detect_res
+zed_seg_res
 runs
 *.eps
 *.aux
 *.log
 *.p
-*.txt
 *.pkl
 *.pt
 *.cls

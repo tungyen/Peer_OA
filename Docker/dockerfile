@@ -1,0 +1,4 @@
+FROM rwthika/ros2-torch:foxy-desktop-torch2.0.1-v23.08
+WORKDIR /save
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
