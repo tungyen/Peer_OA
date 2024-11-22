@@ -1,7 +1,12 @@
 This is the repository for the Pallets Detection task from Peer Robotics Vision Intern Online Assessment.
 
 # _Prepare for the environment_ #
-For this repository, please use the following docker image `tungyenchiang/foxy_torch`.
+For this repository, please use the following docker image `tungyenchiang/foxy_torch`. 
+
+# _The pretrained model weight_ #
+Please go to the [google drive link](https://drive.google.com/drive/folders/1orm1OZtiACqioqHFQ_gD1Xc1m2n7C5fL?usp=sharing) to download the weight of pretrained YoloV11.
+
+Please create a folder called `ckpts` under the repo folder, and store all weight files in this folder like `ckpts/yolov11_detection.pt`.
 
 # _Data collection and preprocessing_ #
 First of all, I used Grounding DINO and Segment Anything (SAM) as the auto-labeling tool for pallets and ground. For the code just following the file `automated-dataset-annotation-and-evaluation-with-grounding-dino-and-sam.ipynb`.

@@ -6,7 +6,9 @@ import cv2
 import os
 from ultralytics import YOLO
 
-
+ckpts_path = "ckpts"
+if not os.path.exists(ckpts_path):
+    os.mkdir(ckpts_path)
 class ZED2YOLOProcessor(Node):
     def __init__(self):
         super().__init__('zed2_yolo_processor')
@@ -26,8 +28,8 @@ class ZED2YOLOProcessor(Node):
         )
         self.bridge = CvBridge()
         
-        ptName_seg = os.path.join("runs", "segment", "train", "weights", "best.pt")
-        ptName_detect = os.path.join("runs", "detect", "train", "weights", "best.pt")
+        ptName_seg = os.path.join(ckpts_path, "yolov11_detection.pt")
+        ptName_detect = os.path.join(ckpts_path, "yolov11_seg.pt")
         self.object_detection_model = YOLO(ptName_detect)
         self.segmentation_model = YOLO(ptName_seg)
     
